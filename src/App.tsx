@@ -21,8 +21,7 @@ function App() {
           <h4>FJKM</h4>
           <p>AMBOARA FITIAVANA</p>
 
-          <div className="bottom">
-            <p>{date}</p>
+          <div>
             <strong>N° {formatNumber(i)}</strong>
           </div>
         </div>
@@ -31,8 +30,8 @@ function App() {
           <h2>{title}</h2>
           <h3>{subtitle}</h3>
 
-          <div className="bottom">
-            <p>{date}</p>
+          <div>
+            <p className="date">{date}</p>
             <strong>N° {formatNumber(i)}</strong>
           </div>
         </div>
