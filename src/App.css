@@ -16,7 +16,7 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
   z-index: 100;
 }
 
@@ -31,12 +31,24 @@ body {
 
 .page {
   width: 210mm;
+  min-height: 297mm;
   margin: 20px auto;
-  background: white;
   padding: 5mm;
+  background: white;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
+  gap: 4mm 0;
+
+  page-break-after: always;
+  break-after: page;
+}
+
+.page:last-child {
+  page-break-after: auto;
+  break-after: auto;
 }
 
 .ticket {
@@ -46,19 +58,21 @@ body {
   display: flex;
 }
 
-.date {
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
 .stub {
-  margin-top: 5px;
   width: 30mm;
   border-right: 2px dashed #555;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main {
   width: 70mm;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .stub h4,
@@ -69,7 +83,7 @@ p {
 }
 
 .main h2 {
-  margin-top: 10px;
+  margin-top: 6px;
   font-size: 14px;
   text-align: center;
 }
@@ -79,13 +93,19 @@ p {
   text-align: center;
 }
 
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
+.date {
+  font-size: 12px;
+  margin-bottom: 4px;
 }
 
-.bottom strong {
+.stub-bottom,
+.main-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.stub-bottom strong,
+.main-bottom strong {
   font-size: 18px;
 }
 
@@ -100,13 +120,18 @@ p {
   }
 
   .page {
-    margin: 0;
-    padding: 0;
     width: 210mm;
-    gap: 0;
+    height: 297mm;
+    margin: 0;
+    padding: 5mm;
+    gap: 4mm 0;
+
+    page-break-after: always;
+    break-after: page;
   }
 
-  .ticket {
-    margin: 0;
+  .page:last-child {
+    page-break-after: auto;
+    break-after: auto;
   }
 }
