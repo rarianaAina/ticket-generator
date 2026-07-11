@@ -12,29 +12,41 @@ function App() {
 
   const formatNumber = (n: number) => String(n).padStart(3, "0");
 
-  const tickets = [];
+  const pages = [];
 
-  for (let i = start; i <= end; i++) {
-    tickets.push(
-      <div className="ticket" key={i}>
-        <div className="stub">
-          <h4>FJKM</h4>
-          <p>AMBOARA FITIAVANA</p>
+  for (let first = start; first <= end; first += 10) {
+    const tickets = [];
 
-          <div>
-            <strong>N° {formatNumber(i)}</strong>
+    const last = Math.min(first + 9, end);
+
+    for (let i = first; i <= last; i++) {
+      tickets.push(
+        <div className="ticket" key={i}>
+          <div className="stub">
+            <h4>FJKM</h4>
+            <p>AMBOARA FITIAVANA</p>
+
+            <div className="stub-bottom">
+              <strong>N° {formatNumber(i)}</strong>
+            </div>
+          </div>
+
+          <div className="main">
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
+
+            <div className="main-bottom">
+              <p className="date">{date}</p>
+              <strong>N° {formatNumber(i)}</strong>
+            </div>
           </div>
         </div>
+      );
+    }
 
-        <div className="main">
-          <h2>{title}</h2>
-          <h3>{subtitle}</h3>
-
-          <div>
-            <p className="date">{date}</p>
-            <strong>N° {formatNumber(i)}</strong>
-          </div>
-        </div>
+    pages.push(
+      <div className="page" key={first}>
+        {tickets}
       </div>
     );
   }
@@ -77,7 +89,7 @@ function App() {
         </button>
       </div>
 
-      <div className="page">{tickets}</div>
+      {pages}
     </>
   );
 }
