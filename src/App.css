@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ececec;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  z-index: 100;
+}
+
+.toolbar input {
+  padding: 8px;
+}
+
+.toolbar button {
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.page {
+  width: 210mm;
+  margin: 20px auto;
+  background: white;
+  padding: 10mm;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5mm;
+}
+
+.ticket {
+  width: 140mm;
+  height: 40mm;
+  border: 1px solid #000;
+  display: flex;
+  overflow: hidden;
+}
+
+.stub {
+  width: 40mm;
+  border-right: 2px dashed #555;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  width: 100mm;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stub h4,
+.main h2,
+.main h3,
+p {
+  margin: 0;
+}
+
+.main h2 {
+  font-size: 15px;
+  text-align: center;
+}
+
+.main h3 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.bottom strong {
+  font-size: 18px;
+}
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  .page {
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    gap: 0;
+  }
+
+  .ticket {
+    margin: 0;
+  }
+}
