@@ -33,35 +33,32 @@ body {
   width: 210mm;
   margin: 20px auto;
   background: white;
-  padding: 10mm;
+  padding: 5mm;
   display: flex;
   flex-wrap: wrap;
-  gap: 5mm;
+  justify-content: space-between;
 }
 
 .ticket {
-  width: 140mm;
-  height: 40mm;
+  width: 100mm;
+  height: 31mm;
   border: 1px solid #000;
   display: flex;
-  overflow: hidden;
+}
+
+.date {
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .stub {
-  width: 40mm;
+  margin-top: 5px;
+  width: 30mm;
   border-right: 2px dashed #555;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .main {
-  width: 100mm;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 70mm;
 }
 
 .stub h4,
@@ -72,12 +69,13 @@ p {
 }
 
 .main h2 {
-  font-size: 15px;
+  margin-top: 10px;
+  font-size: 14px;
   text-align: center;
 }
 
 .main h3 {
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
 }
 
