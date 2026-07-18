@@ -8,6 +8,7 @@ interface ToolbarProps {
   end: number;
   ticketsPerPage: number;
   columns: number;
+  price: string; // Ajout
 
   setTitle: Dispatch<SetStateAction<string>>;
   setSubtitle: Dispatch<SetStateAction<string>>;
@@ -16,6 +17,7 @@ interface ToolbarProps {
   setEnd: Dispatch<SetStateAction<number>>;
   setTicketsPerPage: Dispatch<SetStateAction<number>>;
   setColumns: Dispatch<SetStateAction<number>>;
+  setPrice: Dispatch<SetStateAction<string>>; // Ajout
 }
 
 export default function Toolbar({
@@ -26,6 +28,7 @@ export default function Toolbar({
   end,
   ticketsPerPage,
   columns,
+  price, // Ajout
   setTitle,
   setSubtitle,
   setDate,
@@ -33,6 +36,7 @@ export default function Toolbar({
   setEnd,
   setTicketsPerPage,
   setColumns,
+  setPrice, // Ajout
 }: ToolbarProps) {
   return (
     <div className="toolbar">
@@ -83,6 +87,13 @@ export default function Toolbar({
         value={columns}
         onChange={(e) => setColumns(Number(e.target.value))}
         placeholder="Colonnes"
+      />
+
+      <input
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+        placeholder="Prix (ex: 5 000 Ar)"
+        style={{ width: "150px" }}
       />
 
       <button onClick={() => window.print()}>

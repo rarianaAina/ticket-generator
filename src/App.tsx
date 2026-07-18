@@ -9,6 +9,7 @@ function App() {
   const [date, setDate] = useState("Alahady 12 Jolay 2026");
   const [start, setStart] = useState(1);
   const [end, setEnd] = useState(150);
+  const [price, setPrice] = useState("5 000 Ar"); // Ajout du prix
 
   const formatNumber = (n: number) => String(n).padStart(3, "0");
 
@@ -39,7 +40,10 @@ function App() {
               <p className="date">{date}</p>
             </div>
             <div className="main-bottom">
-              <strong>N° {formatNumber(i)}</strong>
+              <div className="number-price">
+                <span className="number-label">N° {formatNumber(i)}</span>
+                <span className="price-label">{price}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -82,6 +86,12 @@ function App() {
           value={end}
           onChange={(e) => setEnd(Number(e.target.value))}
           placeholder="Fin"
+        />
+        <input
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          placeholder="Prix (ex: 5 000 Ar)"
+          style={{ width: "150px" }}
         />
         <button onClick={() => window.print()}>Imprimer</button>
       </div>

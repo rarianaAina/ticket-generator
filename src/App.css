@@ -131,7 +131,8 @@ body {
 }
 
 .date {
-  font-size: 9px;
+  font-size: 10px;
+  font-weight: bold;
   margin: 0;
   text-align: center;
 }
@@ -165,5 +166,50 @@ body {
   .page:last-child {
     page-break-after: auto;
     break-after: auto;
+  }
+}
+
+/* Ajouter ou remplacer ces styles */
+
+.number-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 4px;
+  margin-top: 2px;
+}
+
+.number-label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.price-label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: #000;
+}
+
+.main-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.main-bottom .number-price {
+  width: 100%;
+}
+
+@media print {
+  .number-label,
+  .price-label {
+    font-size: 12px;
+  }
+  
+  .toolbar input:last-of-type {
+    display: none;
   }
 }
