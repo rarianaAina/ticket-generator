@@ -10,6 +10,7 @@ export default function Ticket({
   ticketWidth,
   stubWidth,
   price,
+  verse, // Ajout
 }: TicketProps) {
   return (
     <div
@@ -44,6 +45,7 @@ export default function Ticket({
 
         <div className="main-bottom">
           <p className="date">{date}</p>
+          <p className="verse-text">{verse}</p> {/* Ajout du verset */}
           <div className="number-price">
             <span className="number-label">N° {formatNumber(number)}</span>
             <span className="merci-text">Mankasitraka tompoko</span>

@@ -124,7 +124,7 @@ body {
 }
 
 .extra-text {
-  font-size: 9px;
+  font-size: 8px;
   text-align: center;
   margin: 0;
   font-weight: bold;
@@ -168,6 +168,7 @@ body {
     break-after: auto;
   }
 }
+
 /* Ajouter ou remplacer ces styles */
 
 .number-price {
@@ -187,7 +188,7 @@ body {
 }
 
 .merci-text {
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 500;
   text-align: center;
   color: #333;
@@ -200,6 +201,16 @@ body {
   text-align: right;
   color: #000;
   flex: 0 0 auto;
+}
+
+.verse-text {
+  font-size: 7px;
+  font-style: italic;
+  text-align: center;
+  color: #555;
+  margin: 2px 0;
+  padding: 0 4px;
+  line-height: 1.3;
 }
 
 .main-bottom {
@@ -220,8 +231,12 @@ body {
   }
   
   .merci-text {
-    font-size: 8px;
-    padding: 0 5px;
+    font-size: 10px;
+  }
+  
+  .verse-text {
+    font-size: 7px;
+    margin: 1px 0;
   }
   
   .toolbar input:last-of-type {

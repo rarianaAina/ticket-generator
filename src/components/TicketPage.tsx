@@ -8,7 +8,8 @@ interface TicketPageProps {
   ticketHeight: number;
   ticketWidth: number;
   stubWidth: number;
-  price: string; // Ajout
+  price: string;
+  verse: string; // Ajout
 }
 
 export default function TicketPage({
@@ -19,7 +20,8 @@ export default function TicketPage({
   ticketHeight,
   ticketWidth,
   stubWidth,
-  price, // Ajout
+  price,
+  verse, // Ajout
 }: TicketPageProps) {
   return (
     <div className="page">
@@ -33,7 +35,8 @@ export default function TicketPage({
           ticketHeight={ticketHeight}
           ticketWidth={ticketWidth}
           stubWidth={stubWidth}
-          price={price} // Ajout
+          price={price}
+          verse={verse} // Ajout
         />
       ))}
     </div>

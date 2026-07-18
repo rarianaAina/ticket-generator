@@ -2,14 +2,17 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [title, setTitle] = useState("FJKM AMBOARA FITIAVANA");
+  const [title, setTitle] = useState("FIANGONAN'I JESOA KRISTY ETO MADAGASIKARA");
   const [subtitle, setSubtitle] = useState(
     "SAMPANA TANORA KRISTIANINA NY AMBOARA"
   );
-  const [date, setDate] = useState("Alahady 12 Jolay 2026");
+  const [date, setDate] = useState("Alahady 19 Jolay 2026");
   const [start, setStart] = useState(1);
   const [end, setEnd] = useState(150);
-  const [price, setPrice] = useState("5 000 Ar");
+  const [price, setPrice] = useState("1 500 Ar");
+  const [verse, setVerse] = useState(
+    "Fa ny mpanome amin'ny fifaliana no tian'Andriamanitra. 2 Korintiana 9:7"
+  );
 
   const formatNumber = (n: number) => String(n).padStart(3, "0");
 
@@ -40,6 +43,7 @@ function App() {
               <p className="date">{date}</p>
             </div>
             <div className="main-bottom">
+              <p className="verse-text">"{verse}"</p>
               <div className="number-price">
                 <span className="number-label">N° {formatNumber(i)}</span>
                 <span className="merci-text">Mankasitraka tompoko</span>
@@ -93,6 +97,12 @@ function App() {
           onChange={(e) => setPrice(e.target.value)}
           placeholder="Prix (ex: 5 000 Ar)"
           style={{ width: "150px" }}
+        />
+        <input
+          value={verse}
+          onChange={(e) => setVerse(e.target.value)}
+          placeholder="Verset biblique"
+          style={{ width: "300px" }}
         />
         <button onClick={() => window.print()}>Imprimer</button>
       </div>

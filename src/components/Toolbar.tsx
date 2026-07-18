@@ -8,7 +8,8 @@ interface ToolbarProps {
   end: number;
   ticketsPerPage: number;
   columns: number;
-  price: string; // Ajout
+  price: string;
+  verse: string; // Ajout
 
   setTitle: Dispatch<SetStateAction<string>>;
   setSubtitle: Dispatch<SetStateAction<string>>;
@@ -17,7 +18,8 @@ interface ToolbarProps {
   setEnd: Dispatch<SetStateAction<number>>;
   setTicketsPerPage: Dispatch<SetStateAction<number>>;
   setColumns: Dispatch<SetStateAction<number>>;
-  setPrice: Dispatch<SetStateAction<string>>; // Ajout
+  setPrice: Dispatch<SetStateAction<string>>;
+  setVerse: Dispatch<SetStateAction<string>>; // Ajout
 }
 
 export default function Toolbar({
@@ -28,7 +30,8 @@ export default function Toolbar({
   end,
   ticketsPerPage,
   columns,
-  price, // Ajout
+  price,
+  verse, // Ajout
   setTitle,
   setSubtitle,
   setDate,
@@ -36,7 +39,8 @@ export default function Toolbar({
   setEnd,
   setTicketsPerPage,
   setColumns,
-  setPrice, // Ajout
+  setPrice,
+  setVerse, // Ajout
 }: ToolbarProps) {
   return (
     <div className="toolbar">
@@ -94,6 +98,13 @@ export default function Toolbar({
         onChange={(e) => setPrice(e.target.value)}
         placeholder="Prix (ex: 5 000 Ar)"
         style={{ width: "150px" }}
+      />
+
+      <input
+        value={verse}
+        onChange={(e) => setVerse(e.target.value)}
+        placeholder="Verset biblique"
+        style={{ width: "300px" }}
       />
 
       <button onClick={() => window.print()}>

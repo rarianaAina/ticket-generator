@@ -6,7 +6,8 @@ export interface TicketConfig {
   end: number;
   ticketsPerPage: number;
   columns: number;
-  price: string; // Ajout
+  price: string;
+  verse: string; // Ajout
 }
 
 export interface TicketProps {
@@ -17,5 +18,6 @@ export interface TicketProps {
   ticketHeight: number;
   ticketWidth: number;
   stubWidth: number;
-  price: string; // Ajout
+  price: string;
+  verse: string; // Ajout
 }

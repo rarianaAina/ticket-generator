@@ -9,7 +9,8 @@ interface PrintLayoutProps {
   end: number;
   ticketsPerPage: number;
   columns: number;
-  price: string; // Ajout
+  price: string;
+  verse: string; // Ajout
 }
 
 export default function PrintLayout({
@@ -20,7 +21,8 @@ export default function PrintLayout({
   end,
   ticketsPerPage,
   columns,
-  price, // Ajout
+  price,
+  verse, // Ajout
 }: PrintLayoutProps) {
 
   const pageWidth = 210;
@@ -62,7 +64,8 @@ export default function PrintLayout({
           ticketHeight={ticketHeight}
           ticketWidth={ticketWidth}
           stubWidth={stubWidth}
-          price={price} // Ajout
+          price={price}
+          verse={verse} // Ajout
         />
       ))}
     </>
