@@ -9,7 +9,7 @@ function App() {
   const [date, setDate] = useState("Alahady 12 Jolay 2026");
   const [start, setStart] = useState(1);
   const [end, setEnd] = useState(150);
-  const [price, setPrice] = useState("5 000 Ar"); // Ajout du prix
+  const [price, setPrice] = useState("5 000 Ar");
 
   const formatNumber = (n: number) => String(n).padStart(3, "0");
 
@@ -42,6 +42,7 @@ function App() {
             <div className="main-bottom">
               <div className="number-price">
                 <span className="number-label">N° {formatNumber(i)}</span>
+                <span className="merci-text">Mankasitraka tompoko</span>
                 <span className="price-label">{price}</span>
               </div>
             </div>

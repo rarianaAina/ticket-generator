@@ -9,7 +9,7 @@ export default function Ticket({
   ticketHeight,
   ticketWidth,
   stubWidth,
-  price, // Ajout
+  price,
 }: TicketProps) {
   return (
     <div
@@ -46,6 +46,7 @@ export default function Ticket({
           <p className="date">{date}</p>
           <div className="number-price">
             <span className="number-label">N° {formatNumber(number)}</span>
+            <span className="merci-text">Mankasitraka tompoko</span>
             <span className="price-label">Prix: {price}</span>
           </div>
         </div>
